@@ -1,4 +1,4 @@
-<h1>Crea un nuovo post</h1>
+<h1>Modifica un post</h1>
 <form action="{{ route("projects.update", $project->id) }}" method="POST">
     @csrf
     @method('PUT')
@@ -27,6 +27,14 @@
     <div>
         <label for="description">Descrizione progetto</label>
         <textarea name="description" id="" cols="30" rows="10" required>{{$project->description}}</textarea>
+    </div>
+
+    <div>
+        Tecnologie utilizzate:
+        @foreach ($types as $type)
+        <input value="{{ $type->id }}" type="checkbox" name="tags[]" id="tag-{{ $type->id }}" {{$project->types->contains($type->id) ? "checked" : ""}}>
+        <label for="tag-{{ $type->id }}">{{ $type->name }}</label>
+        @endforeach
     </div>
 
     <button type="submit">Modifica post</button>

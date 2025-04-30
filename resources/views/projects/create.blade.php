@@ -26,6 +26,15 @@
         <textarea name="description" id="" cols="30" rows="10" required></textarea>
     </div>
 
+
+    <div>
+        Tecnologie utilizzate:
+        @foreach ($types as $type)
+        <input value="{{ $type->id }}" type="checkbox" name="tags[]" id="tag-{{ $type->id }}">
+        <label for="tag-{{ $type->id }}">{{ $type->name }}</label>
+        @endforeach
+    </div>
+
     <button type="submit">Aggiungi post</button>
 </form>
-<button><a href="{{route("projects.index")}}">Torna alla home</a></button>
+<button><a href="{{ route('projects.index') }}">Torna alla home</a></button>

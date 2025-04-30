@@ -22,8 +22,7 @@ class ProjectSeeder extends Seeder
             $newProject->project_start = $faker->dateTimeThisYear();
             $newProject->project_end = $faker->dateTimeThisYear("+1 months");
             $newProject->description = $faker->paragraph();
-            $newProject->type_id = rand(1,9);
-
+            
             $newProject->save();
         }
     }

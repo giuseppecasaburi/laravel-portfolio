@@ -11,6 +11,6 @@ class Project extends Model
     use SoftDeletes;
 
     public function types () {
-        return $this->hasMany("Type::class");
+        return $this->belongsToMany(Type::class);
     }
 }
