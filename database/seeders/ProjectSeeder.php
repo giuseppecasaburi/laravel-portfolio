@@ -14,7 +14,7 @@ class ProjectSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $newProject = new Project();
 
             $newProject->name = $faker->name;
@@ -22,6 +22,7 @@ class ProjectSeeder extends Seeder
             $newProject->project_start = $faker->dateTimeThisYear();
             $newProject->project_end = $faker->dateTimeThisYear("+1 months");
             $newProject->description = $faker->paragraph();
+            $newProject->type_id = rand(1,9);
 
             $newProject->save();
         }
