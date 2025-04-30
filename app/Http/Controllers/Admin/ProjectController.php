@@ -30,7 +30,20 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        
+        $data = $request->all();
+
+        $newProject= new Project();
+        $newProject->name = $data["name"];
+        $newProject->client = $data["client"];
+        $newProject->project_start = $data["project_start"];
+        $newProject->project_end = $data["project_end"];
+        $newProject->description = $data["description"];
+
+        $newProject->save();
+
+        return redirect()->route("projects.show", $newProject);
     }
 
     /**
@@ -46,7 +59,8 @@ class ProjectController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $project = Project::findOrFail($id);
+        return view("projects.edit", compact("project"));
     }
 
     /**
@@ -54,7 +68,20 @@ class ProjectController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+        $project = Project::findOrFail($id);
+
+        // $project->name = $data["name"];
+        // $project->client = $data["client"];
+        // $project->project_start = $data["project_start"];
+        // $project->project_end = $data["project_end"];
+        // $project->description = $data["description"];
+        
+        // $project->save();
+
+        $project->update($data);
+
+        return redirect()->route("projects.show", $project);
     }
 
     /**

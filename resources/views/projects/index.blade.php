@@ -4,4 +4,5 @@
     <h3>{{ $project->name }}</h3>
     <p>{{ $project->description }}</p>
     <a href="{{ route("projects.show", $project->id)}}">Visualizza progetto!</a>
+    <button><a href="{{ route("projects.edit", $project->id) }}">Modifica progetto</a></button>
 @endforeach

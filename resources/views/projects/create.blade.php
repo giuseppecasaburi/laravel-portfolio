@@ -22,9 +22,10 @@
     </div>
 
     <div>
-        <label for="description">Nome Progetto</label>
+        <label for="description">Descrizione progetto</label>
         <textarea name="description" id="" cols="30" rows="10" required></textarea>
     </div>
 
     <button type="submit">Aggiungi post</button>
 </form>
+<button><a href="{{route("projects.index")}}">Torna alla home</a></button>
