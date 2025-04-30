@@ -37,7 +37,7 @@ Procediamo al completamento delle operazioni CRUD sul modello Project:
 **Bonus**
 Proviamo ad aggiungere un controllo: quando l'utente clicca sul pulsante "delete", chiediamo conferma della cancellazione, prima di eliminare l'elemento. Questa operazione possiamo farla a mano con JavaScript o aiutarci con i componenti Bootstrap.
 
-# EX - Aggiungiamo il Type
+# EX - Aggiungiamo il Type ✔
 ## Descrizione
 Continuiamo a lavorare sul nostro sito portfolio e aggiungiamo una nuova entità Type. Questa entità rappresenta la tipologia di un progetto ed è in relazione one to many con i progetti.
 
@@ -50,7 +50,7 @@ I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che a
     Nei form di creazione e modifica dei progetti, dobbiamo permettere di associare un type al progetto stesso. Gestiamo inoltre il salvataggio di questa associazione progetto-tipologia nel controller ProjectController ✔
 
 **Bonus**
-Aggiungere le operazioni CRUD anche per il model Type, in modo da gestire le tipologie di progetto direttamente dal pannello di amministrazione.
+Aggiungere le operazioni CRUD anche per il model Type, in modo da gestire le tipologie di progetto direttamente dal pannello di amministrazione. ✔
 
 # EX - Aggiungiamo la Technology
 ## Descrizione
